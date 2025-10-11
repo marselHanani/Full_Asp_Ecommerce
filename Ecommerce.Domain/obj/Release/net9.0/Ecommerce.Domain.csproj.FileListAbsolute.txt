@@ -1,0 +1,16 @@
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\bin\Release\net9.0\Ecommerce.Domain.deps.json
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\bin\Release\net9.0\Ecommerce.Domain.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\bin\Release\net9.0\Ecommerce.Domain.pdb
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\bin\Release\net9.0\Ecommerce.Common.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\bin\Release\net9.0\Ecommerce.Common.pdb
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.csproj.AssemblyReference.cache
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.AssemblyInfoInputs.cache
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.AssemblyInfo.cs
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.sourcelink.json
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerc.9B51F420.Up2Date
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\refint\Ecommerce.Domain.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\Ecommerce.Domain.pdb
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Domain\obj\Release\net9.0\ref\Ecommerce.Domain.dll

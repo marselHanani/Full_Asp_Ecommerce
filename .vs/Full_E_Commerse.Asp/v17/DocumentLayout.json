@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\filters\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\filters\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\ecommerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\ecommerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\extensions\\fluentvalidationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\extensions\\fluentvalidationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\validators\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\validators\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\ecommerce.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\ecommerce.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\extensions\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\extensions\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\area\\customer\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\area\\customer\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\dtos\\request\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\dtos\\request\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\dtos\\response\\orderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\dtos\\response\\orderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8EF7892-FB6B-4163-B861-1228A576C13E}|Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.domain\\entity\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8EF7892-FB6B-4163-B861-1228A576C13E}|Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:ecommerce.domain\\entity\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\area\\customer\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\area\\customer\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ValidationFilter.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Filters\\ValidationFilter.cs",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Filters\\ValidationFilter.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Filters\\ValidationFilter.cs",
+              "RelativeToolTip": "Ecommerce.API\\Filters\\ValidationFilter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:28:56.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Program.cs",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Program.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Program.cs",
+              "RelativeToolTip": "Ecommerce.API\\Program.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAgwIkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:12:40.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FluentValidationExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Extensions\\FluentValidationExtensions.cs",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Extensions\\FluentValidationExtensions.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Extensions\\FluentValidationExtensions.cs",
+              "RelativeToolTip": "Ecommerce.API\\Extensions\\FluentValidationExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:10:16.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Ecommerce.Application",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Ecommerce.Application.csproj",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Ecommerce.Application.csproj",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Ecommerce.Application.csproj",
+              "RelativeToolTip": "Ecommerce.Application\\Ecommerce.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-10T17:07:40.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductValidator.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Validators\\ProductValidator.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Validators\\ProductValidator.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Validators\\ProductValidator.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Validators\\ProductValidator.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:07:46.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MiddlewareExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Extensions\\MiddlewareExtensions.cs",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Extensions\\MiddlewareExtensions.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Extensions\\MiddlewareExtensions.cs",
+              "RelativeToolTip": "Ecommerce.API\\Extensions\\MiddlewareExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:03:03.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Middlewares\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Ecommerce.API\\Middlewares\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:54:23.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ecommerce.API",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Ecommerce.API.csproj",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Ecommerce.API.csproj",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Ecommerce.API.csproj",
+              "RelativeToolTip": "Ecommerce.API\\Ecommerce.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-10T16:54:01.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Dtos\\Response\\OrderResponse.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Dtos\\Response\\OrderResponse.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Dtos\\Response\\OrderResponse.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Dtos\\Response\\OrderResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:48:35.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\OrderService.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Service\\OrderService.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\OrderService.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Service\\OrderService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:48:22.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Domain\\Entity\\Order.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Domain\\Entity\\Order.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Domain\\Entity\\Order.cs",
+              "RelativeToolTip": "Ecommerce.Domain\\Entity\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:48:01.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Dtos\\Request\\PaymentRequest.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Dtos\\Request\\PaymentRequest.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Dtos\\Request\\PaymentRequest.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Dtos\\Request\\PaymentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:46:47.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Service\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\PaymentService.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Service\\PaymentService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADgvx4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:40:10.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Area\\Customer\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Area\\Customer\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Area\\Customer\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "Ecommerce.API\\Area\\Customer\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:38:34.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Area\\Customer\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Area\\Customer\\Controllers\\CheckoutController.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Area\\Customer\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "Ecommerce.API\\Area\\Customer\\Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:38:31.84Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
