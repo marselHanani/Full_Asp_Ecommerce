@@ -15,12 +15,11 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Cart> Carts { get; set; }
     public DbSet<CartItem> CartItems { get; set; }
-
+    public DbSet<Wishlist> Wishlists { get; set; }
+    public DbSet<Notification> Notifications { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-
-        // BaseEntity common config if needed (Id key is implicit)
         // Category
         modelBuilder.Entity<Category>(b =>
         {
@@ -96,7 +95,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         .WithOne(r => r.ParentReview)
         .HasForeignKey(r => r.ParentReviewId)
         .OnDelete(DeleteBehavior.NoAction); // Prevent cascade delete cycles
-
+        modelBuilder.Owned<Money>();
         // Order
         modelBuilder.Entity<Order>(b =>
         {

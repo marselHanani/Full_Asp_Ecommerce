@@ -1,6 +1,7 @@
 ﻿using Azure.Core;
 using Ecommerce.Application.Dtos.Request;
 using Ecommerce.Application.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Stripe.Forwarding;
@@ -12,6 +13,8 @@ namespace Ecommerce.API.Area.Customer.Controllers
     [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Customer")]
+    [Authorize(Roles = "Customer")]
+
     public class OrdersController(OrderService service) : ControllerBase
     {
         private readonly OrderService _service = service;
@@ -29,7 +32,7 @@ namespace Ecommerce.API.Area.Customer.Controllers
         public async Task<IActionResult> GetOrdersByUserId()
         {
             var userId = GetUserId();
-            var orders = await _service.GetOrdersByUserId(userId.ToString());
+            var orders = await _service.GetOrdersByUserId(userId);
             if (!orders.Any())
             {
                 return NotFound();

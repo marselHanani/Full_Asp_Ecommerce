@@ -19,7 +19,8 @@ namespace Ecommerce.Domain.Repository.Interfaces
         IGenericRepository<Payment> Payments { get; }
         IGenericRepository<Cart> Carts { get; }
         IGenericRepository<CartItem> CartItems { get; }
-
+        IGenericRepository<Wishlist> Wishlists { get; }
+        IGenericRepository<Notification> Notifications { get; }
         Task<int> SaveChangesAsync();
     }
 }

@@ -1,0 +1,8 @@
+{
+  "Ecommerce.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API",
+  "Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application",
+  "Ecommerce.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Common",
+  "Ecommerce.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Domain",
+  "Ecommerce.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Identity",
+  "Ecommerce.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Infrastructure"
+}

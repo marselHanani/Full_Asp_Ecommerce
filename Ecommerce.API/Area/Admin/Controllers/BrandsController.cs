@@ -1,5 +1,6 @@
 ﻿using Ecommerce.Application.Dtos.Request;
 using Ecommerce.Application.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Ecommerce.API.Area.Admin.Controllers
     [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class BrandsController(BrandService service) : ControllerBase
     {
         private readonly BrandService _service = service;

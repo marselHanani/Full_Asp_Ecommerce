@@ -42,5 +42,10 @@ namespace Ecommerce.Infrastructure.Repository.classes
             if (entity is null) return;
             _context.Set<TEntity>().Remove(entity);
         }
+
+        public IQueryable<TEntity> Query()
+        {
+            return _context.Set<TEntity>().AsQueryable();
+        }
     }
 }

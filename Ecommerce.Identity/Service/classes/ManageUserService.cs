@@ -15,15 +15,40 @@ namespace Ecommerce.Identity.Service.classes
     {
         private readonly UserManager<ApplicationUser> _manager = manager;
 
-        public async Task<ICollection<UserResponse>> GetAllUsers()
+        public async Task<(ICollection<UserResponse> Users, int TotalCount)> GetAllUsers(
+            string? search = null,
+            int page = 1,
+            int pageSize = 10,
+            bool? isActive = null)
         {
-            var users = await _manager.Users.ToListAsync();
-            var result = new List<UserResponse>();
+            var query = _manager.Users.AsQueryable();
 
+            // Filter by active status if provided
+            if (isActive.HasValue)
+                query = query.Where(u => u.IsActive == isActive.Value);
+
+            // Search by username or email if provided
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                var searchLower = search.Trim().ToLowerInvariant();
+                query = query.Where(u =>
+                    u.UserName.ToLower().Contains(searchLower) ||
+                    u.Email.ToLower().Contains(searchLower));
+            }
+
+            var totalCount = await query.CountAsync();
+
+            // Pagination
+            var users = await query
+                .OrderByDescending(u => u.CreatedAt)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = new List<UserResponse>();
             foreach (var user in users)
             {
                 var roles = await _manager.GetRolesAsync(user);
-
                 result.Add(new UserResponse
                 {
                     Id = Guid.Parse(user.Id),
@@ -37,7 +62,7 @@ namespace Ecommerce.Identity.Service.classes
                 });
             }
 
-            return result;
+            return (result, totalCount);
         }
 
         public async Task<UserResponse> GetUserById(string userId)

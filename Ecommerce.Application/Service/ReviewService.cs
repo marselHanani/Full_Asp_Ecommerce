@@ -11,12 +11,15 @@ using Mapster;
 
 namespace Ecommerce.Application.Service
 {
-    public class ReviewService(IUnitOfWork unit, IReviewRepository reviewRepo, IInformationUserService userService)
+    public class ReviewService(IUnitOfWork unit, IReviewRepository reviewRepo, IInformationUserService userService
+        , NotificationService notification, CacheService cache)
     {
         private readonly IUnitOfWork _unit = unit;
         private readonly IReviewRepository _reviewRepo = reviewRepo;
         private readonly IInformationUserService _userService = userService;
-        
+        private readonly NotificationService _notification = notification;
+        private readonly CacheService _cache = cache;
+
         private async Task<List<ReplyResponse>> MapRepliesRecursively(IEnumerable<Review> replies)
         {
             var result = new List<ReplyResponse>();
@@ -52,6 +55,10 @@ namespace Ecommerce.Application.Service
 
         public async Task<IEnumerable<ReviewResponse>> GetAllReviewsByProductId(Guid productId)
         {
+            string cacheKey = $"Reviews_Product_{productId}";
+            var cached = await _cache.GetAsync<IEnumerable<ReviewResponse>>(cacheKey);
+            if (cached is not null) return cached;
+
             var reviews = await _reviewRepo.GetAllReviewsByProductId(productId);
             var result = new List<ReviewResponse>();
             
@@ -59,6 +66,8 @@ namespace Ecommerce.Application.Service
             {
                 result.Add(await CreateReviewResponse(review));
             }
+
+            await _cache.SetAsync(cacheKey, result, TimeSpan.FromMinutes(10));
             return result;
         }
 
@@ -75,24 +84,38 @@ namespace Ecommerce.Application.Service
 
         public async Task<IEnumerable<ReviewResponse>> GetAllReviews()
         {
+            const string cacheKey = "AllReviews";
+            var cached = await _cache.GetAsync<IEnumerable<ReviewResponse>>(cacheKey);
+            if (cached is not null) return cached;
+
             var reviews = await _reviewRepo.GetAllReviews();
             var result = new List<ReviewResponse>();
-            
+
             foreach (var review in reviews)
             {
                 result.Add(await CreateReviewResponse(review));
             }
-            
+
+            await _cache.SetAsync(cacheKey, result, TimeSpan.FromMinutes(10));
             return result;
         }
 
         public async Task<ReviewResponse> GetReviewById(Guid id)
         {
+            string cacheKey = $"Review_{id}";
+            var cachedReview = await _cache.GetAsync<ReviewResponse>(cacheKey);
+            if (cachedReview != null)
+            {
+                return cachedReview;
+            }
+
             var review = await _unit.Reviews.GetByIdAsync(id);
             if (review == null) 
                 throw new KeyNotFoundException($"Review with ID {id} not found");
-            
-            return await CreateReviewResponse(review);
+
+            var response = await CreateReviewResponse(review);
+            await _cache.SetAsync(cacheKey, response, TimeSpan.FromMinutes(10));
+            return response;
         }
 
         public async Task AddReview(ReviewRequest request, Guid userId)
@@ -110,6 +133,7 @@ namespace Ecommerce.Application.Service
             review.UserId = userId;
             await _unit.Reviews.AddAsync(review);
             await _unit.SaveChangesAsync();
+
         }
 
         public async Task UpdateReview(Guid id, ReviewRequest request)
@@ -142,7 +166,7 @@ namespace Ecommerce.Application.Service
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request), "Reply request cannot be null");
-                
+
             if (string.IsNullOrWhiteSpace(request.Comment))
                 throw new ArgumentException("Reply comment cannot be empty", nameof(request.Comment));
 
@@ -160,6 +184,13 @@ namespace Ecommerce.Application.Service
             };
             await _unit.Reviews.AddAsync(replyReview);
             await _unit.SaveChangesAsync();
+
+            if (parentReview.UserId != userId)
+            {
+                var replierName = await _userService.GetUserNameByIdAsync(userId);
+                var message = $"{replierName} رد على تعليقك: \"{request.Comment}\"";
+                await _notification.SendNotificationAsync(parentReview.UserId.ToString(), message);
+            }
         }
     }
 }

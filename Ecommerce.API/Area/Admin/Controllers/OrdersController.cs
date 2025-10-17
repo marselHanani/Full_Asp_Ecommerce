@@ -9,14 +9,20 @@ namespace Ecommerce.API.Area.Admin.Controllers
     [ApiController]
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class OrdersController(OrderService service) : ControllerBase
     {
         private readonly OrderService _service = service;
 
         [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAllOrders()
+        public async Task<IActionResult> GetAllOrders(
+           [FromQuery] string? search = null,
+           [FromQuery] string? status = null,
+           [FromQuery] int page = 1,
+           [FromQuery] int pageSize = 10)
         {
-            var orders = await _service.GetAllOrders();
+            var orders = await _service.GetAllOrders(search, status, page, pageSize);
             return Ok(orders);
         }
         [HttpGet("{id:guid}")]

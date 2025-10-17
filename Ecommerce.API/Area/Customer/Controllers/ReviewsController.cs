@@ -10,6 +10,8 @@ namespace Ecommerce.API.Area.Customer.Controllers
     [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Customer")]
+    [Authorize(Roles = "Customer")]
+
     public class ReviewsController(ReviewService service) : ControllerBase
     {
         private readonly ReviewService _service = service;

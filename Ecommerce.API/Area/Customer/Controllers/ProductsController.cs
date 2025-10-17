@@ -14,10 +14,26 @@ namespace Ecommerce.API.Area.Customer.Controllers
         private readonly ProductService _service = service;
 
         [HttpGet("")]
-        public async Task<IActionResult> GetAllProducts()
+        public async Task<IActionResult> GetAllProducts(
+            [FromQuery] string? search = null,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10,
+            [FromQuery] decimal? minPrice = null,
+            [FromQuery] decimal? maxPrice = null,
+            [FromQuery] Guid? categoryId = null,
+            [FromQuery] Guid? brandId = null)
         {
-            var products = await _service.GetAllProducts();
-            return Ok(products);
+            var (products, totalCount) = await _service.GetAllProducts(
+                search, page, pageSize, minPrice, maxPrice, categoryId, brandId
+            );
+
+            return Ok(new
+            {
+                Products = products,
+                TotalCount = totalCount,
+                Page = page,
+                PageSize = pageSize
+            });
         }
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetProductById([FromRoute] Guid id)

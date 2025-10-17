@@ -16,16 +16,19 @@ namespace Ecommerce.Application.Service
         private readonly IEmailService _emailService;
         private readonly IInformationUserService _userService;
         private readonly IUnitOfWork _unit;
+        private readonly NotificationService _notification;
 
         private readonly StripeSettings _stripeSettings;
         public PaymentService(IOptions<StripeSettings> stripeSettings, 
             IEmailService emailService , 
             IInformationUserService userService,
-            IUnitOfWork unit)
+            IUnitOfWork unit,
+            NotificationService notification)
         {
             _emailService = emailService;
             _userService = userService;
             _unit = unit;
+            _notification = notification;
             _stripeSettings = stripeSettings.Value;
             StripeConfiguration.ApiKey = _stripeSettings.SecretKey;
         }
@@ -184,6 +187,10 @@ namespace Ecommerce.Application.Service
                     ";
 
                     await _emailService.SendOrderConfirmationEmailAsync(user.Email, subject, htmlContent);
+
+                    // Send notification using NotificationService
+                    await _notification.SendNotificationAsync( user.Id,
+                       $"Your payment for order {orderId} was successful. Total Amount: {order.TotalAmount:C}");
                 }
             }
 

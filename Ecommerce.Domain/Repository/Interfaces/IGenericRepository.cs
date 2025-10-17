@@ -8,6 +8,7 @@ namespace Ecommerce.Domain.Repository.Interfaces
 {
     public interface IGenericRepository<TEntity> where TEntity : class 
     {
+        IQueryable<TEntity> Query();
         Task<TEntity?> GetByIdAsync(Guid id);
         Task<IEnumerable<TEntity?>> GetAllAsync();
         Task AddAsync(TEntity entity);

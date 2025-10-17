@@ -16,3 +16,5 @@ C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\obj\Release\net
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\obj\Release\net9.0\Ecommerce.Identity.pdb
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\obj\Release\net9.0\Ecommerce.Identity.genruntimeconfig.cache
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\obj\Release\net9.0\ref\Ecommerce.Identity.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\bin\Release\net9.0\Ecommerce.Domain.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\bin\Release\net9.0\Ecommerce.Domain.pdb

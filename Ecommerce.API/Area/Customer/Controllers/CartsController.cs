@@ -11,6 +11,8 @@ namespace Ecommerce.API.Area.Customer.Controllers
     [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Customer")]
+    [Authorize(Roles = "Customer")]
+
     public class CartsController(CartService service) : ControllerBase
     {
         private readonly CartService _service = service;

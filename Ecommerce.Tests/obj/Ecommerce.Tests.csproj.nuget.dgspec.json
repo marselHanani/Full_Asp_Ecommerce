@@ -173,6 +173,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.0.0, )"
@@ -192,6 +196,10 @@
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[2.3.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.7.2, )"
             },
             "Slugify.Core": {
               "target": "Package",
@@ -392,6 +400,9 @@
             "projectReferences": {
               "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Common\\Ecommerce.Common.csproj": {
                 "projectPath": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Common\\Ecommerce.Common.csproj"
+              },
+              "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
+                "projectPath": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Domain\\Ecommerce.Domain.csproj"
               }
             }
           }
@@ -629,6 +640,10 @@
             "FluentAssertions": {
               "target": "Package",
               "version": "[8.6.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[9.0.10, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

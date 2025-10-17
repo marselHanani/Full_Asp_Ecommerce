@@ -1,5 +1,6 @@
 ﻿using Ecommerce.Identity.Service.classes;
 using Ecommerce.Identity.Service.interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,8 @@ namespace Ecommerce.API.Area.Admin.Controllers
     [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class ManageUsersController(IManageUserService service) : ControllerBase
     {
         private readonly IManageUserService _service = service;

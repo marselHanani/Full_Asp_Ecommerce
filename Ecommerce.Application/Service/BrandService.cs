@@ -15,7 +15,7 @@ using Slugify;
 namespace Ecommerce.Application.Service
 {
     public class BrandService(IUnitOfWork unit , SlugHelper slugHelper , IBrandRepository brandRepo
-        , FileService fileService,FileUrlHelper helper, IHttpContextAccessor http)
+        , FileService fileService,FileUrlHelper helper, IHttpContextAccessor http, CacheService cache)
     {
         private readonly IUnitOfWork _unit = unit;
         private readonly SlugHelper _slugHelper = slugHelper;
@@ -23,6 +23,7 @@ namespace Ecommerce.Application.Service
         private readonly FileService _fileService = fileService;
         private readonly FileUrlHelper _helper = helper;
         private readonly IHttpContextAccessor _http = http;
+        private readonly CacheService _cache = cache;
 
         public async Task CreateNewBrand(BrandRequest request)
         {
@@ -55,9 +56,20 @@ namespace Ecommerce.Application.Service
             await _unit.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<BrandResponse>> GetAllBrands()
+        public async Task<IEnumerable<BrandResponse>> GetAllBrands(string? search = null)
         {
             var brands = await _brandRepo.GetBrandsWithProducts();
+            const string cacheKey = "Brands_all";
+            var cached = await _cache.GetAsync<IEnumerable<BrandResponse>>(cacheKey);
+            if (cached != null) return cached;
+            // Apply search filter if provided
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                brands = brands
+                    .Where(b => b.Name.Contains(search, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+            }
+
             var result = brands.Adapt<List<BrandResponse>>();
             var request = _http.HttpContext!.Request;
 
@@ -66,14 +78,18 @@ namespace Ecommerce.Application.Service
                 result[i].ImageUrl = _helper.GetImageUrl(brands[i].ImageName, "Brands", request);
             }
 
+            await _cache.SetAsync(cacheKey, result, TimeSpan.FromMinutes(10));
             return result;
-
         }
         public async Task<BrandResponse?> GetBrandById(Guid id)
         {
+            var cacheKey = $"brand_{id}";
+            var cached = await _cache.GetAsync<BrandResponse>(cacheKey);
+            if (cached != null) return cached;
             var brand = await _brandRepo.GetBrandByIdWithProducts(id);
             var result = brand?.Adapt<BrandResponse>();
             result.ImageUrl = _helper.GetImageUrl(brand.ImageName, "Brands", _http.HttpContext.Request);
+            await _cache.SetAsync(cacheKey, result, TimeSpan.FromMinutes(10));
             return result;
         }
         public async Task DeleteBrand(Guid id)

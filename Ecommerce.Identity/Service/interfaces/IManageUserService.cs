@@ -9,7 +9,11 @@ namespace Ecommerce.Identity.Service.interfaces
 {
     public interface IManageUserService
     {
-        Task<ICollection<UserResponse>> GetAllUsers();
+        Task<(ICollection<UserResponse> Users, int TotalCount)> GetAllUsers(
+            string? search = null,
+            int page = 1,
+            int pageSize = 10,
+            bool? isActive = null);
         Task<bool> ChangeUserRoleAsync(Guid userId, string newRole);
         Task<UserResponse> GetUserById(string userId);
         Task<bool> BlockUserAsync(Guid userId);

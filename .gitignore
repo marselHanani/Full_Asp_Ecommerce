@@ -1,2 +1,3 @@
 /.vs
 /Ecommerce.API/appsettings.json
+/Ecommerce.Application/Service/PdfService.cs

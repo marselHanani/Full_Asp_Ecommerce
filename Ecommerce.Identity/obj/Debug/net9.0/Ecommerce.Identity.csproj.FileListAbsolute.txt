@@ -42,3 +42,5 @@ C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\bin\Debug\net9.
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\obj\Debug\net9.0\Ecommerc.C96AB5E0.Up2Date
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\obj\Debug\net9.0\Ecommerce.Identity.genruntimeconfig.cache
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\obj\Debug\net9.0\ref\Ecommerce.Identity.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\bin\Debug\net9.0\Ecommerce.Domain.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.Identity\bin\Debug\net9.0\Ecommerce.Domain.pdb

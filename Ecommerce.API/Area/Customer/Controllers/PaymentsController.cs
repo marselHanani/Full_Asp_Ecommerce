@@ -1,17 +1,20 @@
 ﻿using Ecommerce.Application.Dtos.Request;
 using Ecommerce.Application.Dtos.Response;
 using Ecommerce.Application.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Stripe;
-using System.Threading.Tasks;
 using Stripe.BillingPortal;
+using System.Threading.Tasks;
 
 namespace Ecommerce.API.Area.Customer.Controllers
 {
     [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Customer")]
+    [Authorize(Roles = "Customer")]
+
     public class PaymentsController(PaymentService service , IConfiguration config) : ControllerBase
     {
         private readonly PaymentService _service = service;

@@ -32,8 +32,8 @@ namespace Ecommerce.Domain.Entity
         public Guid BrandId { get; set; }
 
         // Navigation
-        public Category Category { get; private set; } = null!;
-        public Brand Brand { get; private set; } = null!;
+        public Category Category { get; set; } = null!;
+        public Brand Brand { get; set; } = null!;
         public ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();
         public ICollection<Review> Reviews { get; private set; } = new List<Review>();
 

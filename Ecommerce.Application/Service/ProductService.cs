@@ -19,7 +19,8 @@ namespace Ecommerce.Application.Service
         FileUrlHelper helper,
         IProductRepository productRepo,
         IHttpContextAccessor httpContextAccessor,
-        FileService fileService)
+        FileService fileService,
+        CacheService cache)
     {
         private readonly IUnitOfWork _unit = unit;
         private readonly SlugHelper _slugHelper = slugHelper;
@@ -27,6 +28,7 @@ namespace Ecommerce.Application.Service
         private readonly IProductRepository _productRepo = productRepo;
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
         private readonly FileService _fileService = fileService;
+        private readonly CacheService _cache = cache;
 
         public async Task CreateNewProduct(ProductRequest request)
         {
@@ -68,11 +70,69 @@ namespace Ecommerce.Application.Service
             await _unit.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<ProductResponse>> GetAllProducts()
+        public async Task<(IEnumerable<ProductResponse> Products, int TotalCount)> GetAllProducts(
+            string? search = null,
+            int page = 1,
+            int pageSize = 10,
+            decimal? minPrice = null,
+            decimal? maxPrice = null,
+            Guid? categoryId = null,
+            Guid? brandId = null)
         {
-            var products = await _productRepo.GetAllProductsWithDetails();
-            var responses = products.Adapt<List<ProductResponse>>();
+            // Build cache key based on all filter parameters
+            var cacheKey = $"products:{search}:{page}:{pageSize}:{minPrice}:{maxPrice}:{categoryId}:{brandId}";
+            var cachedResult = await _cache.GetAsync<List<ProductResponse>>(cacheKey);
 
+            if (cachedResult != null)
+            {
+                return (cachedResult, cachedResult.Count);
+            }
+
+            var products = await _productRepo.GetAllProductsWithDetails();
+
+            // Search filter
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                var searchLower = search.Trim().ToLowerInvariant();
+                products = products
+                    .Where(p => p.Name.ToLowerInvariant().Contains(searchLower) ||
+                                (p.Description != null && p.Description.ToLowerInvariant().Contains(searchLower)) ||
+                                (p.Category != null && p.Category.Name.ToLowerInvariant().Contains(searchLower)) ||
+                                (p.Brand != null && p.Brand.Name.ToLowerInvariant().Contains(searchLower)))
+                    .ToList();
+            }
+
+            // Price filter
+            if (minPrice.HasValue)
+            {
+                products = products.Where(p => p.Price.Amount >= minPrice.Value).ToList();
+            }
+            if (maxPrice.HasValue)
+            {
+                products = products.Where(p => p.Price.Amount <= maxPrice.Value).ToList();
+            }
+
+            // Category filter
+            if (categoryId.HasValue)
+            {
+                products = products.Where(p => p.CategoryId == categoryId.Value).ToList();
+            }
+
+            // Brand filter
+            if (brandId.HasValue)
+            {
+                products = products.Where(p => p.BrandId == brandId.Value).ToList();
+            }
+
+            var totalCount = products.Count;
+
+            // Pagination
+            products = products
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            var responses = products.Adapt<List<ProductResponse>>();
             var request = _httpContextAccessor.HttpContext!.Request;
 
             foreach (var product in responses)
@@ -101,13 +161,25 @@ namespace Ecommerce.Application.Service
                 }
             }
 
-            return responses;
+            await _cache.SetAsync(cacheKey, (responses, totalCount), TimeSpan.FromMinutes(10));
+
+            return (responses, totalCount);
         }
 
         public async Task<ProductResponse?> GetProductById(Guid id)
         {
+            var cacheKey = $"product:{id}";
+            var cachedProduct = await _cache.GetAsync<ProductResponse>(cacheKey);
+            if (cachedProduct != null)
+                return cachedProduct;
+
             var product = await _productRepo.GetProductWithDetailsById(id);
-            return await BuildProductResponse(product);
+            var response = await BuildProductResponse(product);
+
+            if (response != null)
+                await _cache.SetAsync(cacheKey, response, TimeSpan.FromMinutes(10));
+
+            return response;
         }
 
         public async Task UpdateProduct(Guid id, ProductRequest request)
@@ -189,14 +261,34 @@ namespace Ecommerce.Application.Service
 
         public async Task<ProductResponse?> GetProductByCategorySlug(string slug)
         {
+            var cacheKey = $"product:category:{slug}";
+            var cachedProduct = await _cache.GetAsync<ProductResponse>(cacheKey);
+            if (cachedProduct != null)
+                return cachedProduct;
+
             var product = await _productRepo.GetProductWithCategorySlug(slug);
-            return await BuildProductResponse(product);
+            var response = await BuildProductResponse(product);
+
+            if (response != null)
+                await _cache.SetAsync(cacheKey, response, TimeSpan.FromMinutes(10));
+
+            return response;
         }
 
         public async Task<ProductResponse?> GetProductByBrandSlug(string slug)
         {
+            var cacheKey = $"product:brand:{slug}";
+            var cachedProduct = await _cache.GetAsync<ProductResponse>(cacheKey);
+            if (cachedProduct != null)
+                return cachedProduct;
+
             var product = await _productRepo.GetProductWithBrandSlug(slug);
-            return await BuildProductResponse(product);
+            var response = await BuildProductResponse(product);
+
+            if (response != null)
+                await _cache.SetAsync(cacheKey, response, TimeSpan.FromMinutes(10));
+
+            return response;
         }
 
         private async Task<ProductResponse?> BuildProductResponse(Product? product)

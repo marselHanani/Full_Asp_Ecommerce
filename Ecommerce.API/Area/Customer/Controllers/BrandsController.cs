@@ -12,9 +12,9 @@ namespace Ecommerce.API.Area.Customer.Controllers
         private readonly BrandService _service = service;
 
         [HttpGet("")]
-        public async Task<IActionResult> GetAllBrands()
+        public async Task<IActionResult> GetAllBrands([FromQuery] string? search)
         {
-            var brands =await _service.GetAllBrands();
+            var brands =await _service.GetAllBrands(search);
             return Ok(brands);
         }
         [HttpGet("{id:guid}")]

@@ -23,7 +23,8 @@ namespace Ecommerce.Infrastructure.Repository.classes
         public IGenericRepository<Payment> Payments { get; } = new GenericRepository<Payment>(context);
         public IGenericRepository<Cart> Carts { get; } = new GenericRepository<Cart>(context);
         public IGenericRepository<CartItem> CartItems { get; } = new GenericRepository<CartItem>(context);
-
+        public IGenericRepository<Wishlist> Wishlists { get; } = new GenericRepository<Wishlist>(context);
+        public IGenericRepository<Notification> Notifications { get; } = new GenericRepository<Notification>(context);
         public async Task<int> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync();

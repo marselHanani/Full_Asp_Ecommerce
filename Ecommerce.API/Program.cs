@@ -21,8 +21,12 @@ using Microsoft.IdentityModel.Tokens;
 using System.Configuration;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
+using Ecommerce.API.Hubs;
+using QuestPDF.Infrastructure;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -117,6 +121,10 @@ builder.Services.AddControllers(options =>
         options.DataAnnotationLocalizerProvider = (type, factory) =>
             factory.Create(typeof(SharedResource));
     });
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("RedisConnection");
+});
 
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -146,22 +154,27 @@ builder.Services.AddScoped<CheckoutService>();
 builder.Services.AddScoped<LocationHelper>();
 builder.Services.AddScoped<IManageUserService,ManageUserService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<ReportingService>();
+builder.Services.AddScoped<CacheService>();
+builder.Services.AddScoped<NotificationService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<LocationHelper>();
 builder.Services.AddFluentValidation();
+builder.Services.AddScoped<IUserProfileService, UserProfileService>();
 TypeAdapterConfig.GlobalSettings.Scan(typeof(ProductMappingConfig).Assembly);
 TypeAdapterConfig.GlobalSettings.Scan(typeof(ProductResponseMappingConfig).Assembly);
 TypeAdapterConfig.GlobalSettings.Scan(typeof(CartMappingConfig).Assembly);
 TypeAdapterConfig.GlobalSettings.Scan(typeof(ReviewResponseMappingConfig).Assembly);
-
-
+builder.Services.AddSignalR();
+QuestPDF.Settings.License = LicenseType.Community;
 builder.Services.AddSingleton<Slugify.SlugHelper>();
 
 builder.Services.Configure<StripeSettings>(
     builder.Configuration.GetSection("Stripe"));
 var app = builder.Build();
+
 
 var locOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>();
 app.UseRequestLocalization(locOptions.Value);
@@ -209,6 +222,7 @@ app.UseAuthorization();
 app.MapControllers();
 app.UseStaticFiles();
 app.UseGlobalExceptionHandler();
+app.MapHub<NotificationHub>("/hubs/notifications");
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

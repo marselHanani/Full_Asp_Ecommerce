@@ -8,6 +8,8 @@ namespace Ecommerce.API.Area.Admin.Controllers
     [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class RolesController(IRoleService service) : ControllerBase
     {
         private readonly IRoleService _service = service;

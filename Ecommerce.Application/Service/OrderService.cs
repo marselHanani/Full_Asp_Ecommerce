@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ecommerce.Application.Dtos.Request;
+﻿using Ecommerce.Application.Dtos.Request;
 using Ecommerce.Application.Dtos.Response;
 using Ecommerce.Application.Helper;
 using Ecommerce.Domain.Entity;
@@ -14,24 +9,62 @@ using Microsoft.AspNetCore.Http;
 namespace Ecommerce.Application.Service
 {
     public class OrderService(IUnitOfWork unit, IOrderRepository orderRepo
-        , PaymentService paymentService , LocationHelper location)
+        , PaymentService paymentService , LocationHelper location , NotificationService notification ,CacheService cache)
     {
         private readonly IUnitOfWork _unit = unit;
         private readonly IOrderRepository _orderRepo = orderRepo;
         private readonly PaymentService _paymentService = paymentService;
         private readonly LocationHelper _location = location;
+        private readonly NotificationService _notification = notification;
+        private readonly CacheService _cache = cache;
 
         // Implement order-related business logic here
 
-        public async Task<IEnumerable<OrderResponse>> GetAllOrders()
+        public async Task<(IEnumerable<OrderResponse> Orders, int TotalCount)> GetAllOrders(
+            string? search = null,
+            string? status = null,
+            int page = 1,
+            int pageSize = 10)
         {
+            string cacheKey = $"orders_{search}_{status}_{page}_{pageSize}";
+            var cachedResult = await _cache.GetAsync<IEnumerable<OrderResponse>>(cacheKey);
+            if (cachedResult != null) return (cachedResult, cachedResult.Count());
+          
+
             var orders = await _orderRepo.GetAllOrdersWithDetailsAsync();
-            return orders.Adapt<IEnumerable<OrderResponse>>();
+
+            // Filtering
+            if (!string.IsNullOrWhiteSpace(status))
+            {
+                orders = orders.Where(o => o.Status.ToString().Equals(status, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Searching (by UserId or ShippingAddress)
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                orders = orders.Where(o =>
+                    (!string.IsNullOrEmpty(o.UserId) && o.UserId.Contains(search, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(o.ShippingAddress) && o.ShippingAddress.Contains(search, StringComparison.OrdinalIgnoreCase))
+                );
+            }
+
+            int totalCount = orders.Count();
+
+            // Pagination
+            orders = orders
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize);
+
+            var result = orders.Adapt<IEnumerable<OrderResponse>>();
+            var response = (result, totalCount);
+
+            await _cache.SetAsync(cacheKey, response, TimeSpan.FromMinutes(5));
+            return response;
         }
 
-        public async Task<IEnumerable<OrderResponse>> GetOrdersByUserId(string userId)
+        public async Task<IEnumerable<OrderResponse>> GetOrdersByUserId(Guid userId)
         {
-            var orders = await _orderRepo.GetOrdersByUserIdAsync(userId);
+            var orders = await _orderRepo.GetOrdersByUserIdAsync(userId.ToString());
             return orders.Adapt<IEnumerable<OrderResponse>>();
         }
 
@@ -82,6 +115,7 @@ namespace Ecommerce.Application.Service
             order.PaymentId = payment.Id.ToString();
 
             await _unit.SaveChangesAsync();
+            await _notification.SendNotificationAsync(order.UserId,$"Your order {order} has been created successfully.");
             return new
             {
                 Message = "Order created successfully.",

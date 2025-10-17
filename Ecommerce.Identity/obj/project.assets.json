@@ -2087,6 +2087,19 @@
         "runtime": {
           "bin/placeholder/Ecommerce.Common.dll": {}
         }
+      },
+      "Ecommerce.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Ecommerce.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ecommerce.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ecommerce.Domain.dll": {}
+        }
       }
     }
   },
@@ -5492,11 +5505,17 @@
       "type": "project",
       "path": "../Ecommerce.Common/Ecommerce.Common.csproj",
       "msbuildProject": "../Ecommerce.Common/Ecommerce.Common.csproj"
+    },
+    "Ecommerce.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Ecommerce.Domain/Ecommerce.Domain.csproj",
+      "msbuildProject": "../Ecommerce.Domain/Ecommerce.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Ecommerce.Common >= 1.0.0",
+      "Ecommerce.Domain >= 1.0.0",
       "Microsoft.AspNetCore.Http >= 2.3.0",
       "Microsoft.AspNetCore.Identity >= 2.3.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 9.0.9",
@@ -5540,6 +5559,9 @@
           "projectReferences": {
             "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Common\\Ecommerce.Common.csproj": {
               "projectPath": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Common\\Ecommerce.Common.csproj"
+            },
+            "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
+              "projectPath": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Domain\\Ecommerce.Domain.csproj"
             }
           }
         }
