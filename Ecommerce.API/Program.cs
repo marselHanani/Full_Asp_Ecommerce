@@ -123,7 +123,8 @@ builder.Services.AddControllers(options =>
     });
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = builder.Configuration.GetConnectionString("RedisConnection");
+    options.Configuration = Environment.GetEnvironmentVariable("REDIS_URL")
+                            ?? builder.Configuration.GetConnectionString("RedisConnection");
 });
 
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
