@@ -1,4 +1,5 @@
 using Ecommerce.API.Extensions;
+using Ecommerce.API.Hubs;
 using Ecommerce.Application.Helper;
 using Ecommerce.Application.MappingConfig;
 using Ecommerce.Application.Service;
@@ -16,14 +17,14 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using QuestPDF.Infrastructure;
+using StackExchange.Redis;
 using System.Configuration;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
-using Ecommerce.API.Hubs;
-using QuestPDF.Infrastructure;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -121,11 +122,8 @@ builder.Services.AddControllers(options =>
         options.DataAnnotationLocalizerProvider = (type, factory) =>
             factory.Create(typeof(SharedResource));
     });
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.Configuration = Environment.GetEnvironmentVariable("REDIS_URL")
-                            ?? builder.Configuration.GetConnectionString("RedisConnection");
-});
+var redisConnection = builder.Configuration.GetConnectionString("Redis");
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnection));
 
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<IUserService, UserService>();
