@@ -65,7 +65,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[9.0.9, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -77,25 +77,13 @@
               "target": "Package",
               "version": "[9.0.9, )"
             },
-            "Microsoft.Extensions.Caching.StackExchangeRedis": {
-              "target": "Package",
-              "version": "[9.0.10, )"
-            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[9.0.0, )"
             },
-            "NContext.Extensions.Redis": {
-              "target": "Package",
-              "version": "[4.0.1.25, )"
-            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
-            },
-            "StackExchange.Redis": {
-              "target": "Package",
-              "version": "[2.9.17, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -184,6 +172,10 @@
             "ClosedXML": {
               "target": "Package",
               "version": "[0.105.0, )"
+            },
+            "EnyimMemcachedCore": {
+              "target": "Package",
+              "version": "[3.4.5, )"
             },
             "FluentValidation": {
               "target": "Package",

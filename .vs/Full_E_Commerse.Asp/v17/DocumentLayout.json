@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\service\\memcacheddistributedcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\service\\memcacheddistributedcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\service\\cacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\service\\cacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\ecommerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\ecommerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\service\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\service\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{07F1715B-90A6-42A8-98DD-7AD1C6D0892B}|Ecommerce.API\\Ecommerce.API.csproj|solutionrelative:ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\marselhanane\\desktop\\full_e_commerse\\ecommerce.application\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ED93D9-A437-44E0-912D-424F3FB60C08}|Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:ecommerce.application\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +46,93 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemcachedDistributedCache.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\MemcachedDistributedCache.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Service\\MemcachedDistributedCache.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\MemcachedDistributedCache.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Service\\MemcachedDistributedCache.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowA4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T07:17:40.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ecommerce.API",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Ecommerce.API.csproj",
+              "RelativeDocumentMoniker": "Ecommerce.API\\Ecommerce.API.csproj",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Ecommerce.API.csproj",
+              "RelativeToolTip": "Ecommerce.API\\Ecommerce.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-23T16:35:29.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CacheService.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\CacheService.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Service\\CacheService.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\CacheService.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Service\\CacheService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T15:20:30.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Hubs\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Hubs\\NotificationHub.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Hubs\\NotificationHub.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Hubs\\NotificationHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T14:38:31.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Program.cs",
               "RelativeDocumentMoniker": "Ecommerce.API\\Program.cs",
               "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\Program.cs",
               "RelativeToolTip": "Ecommerce.API\\Program.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAwwH0AAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T17:58:06.12Z",
+              "WhenOpened": "2025-10-23T14:28:31.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "BrandService.cs",
+              "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\BrandService.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Application\\Service\\BrandService.cs",
+              "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.Application\\Service\\BrandService.cs",
+              "RelativeToolTip": "Ecommerce.Application\\Service\\BrandService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAuwGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T15:49:55.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\appsettings.json",
               "RelativeDocumentMoniker": "Ecommerce.API\\appsettings.json",
               "ToolTip": "C:\\Users\\marselhanane\\Desktop\\Full_E_Commerse\\Ecommerce.API\\appsettings.json",
               "RelativeToolTip": "Ecommerce.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-17T12:41:53.608Z",
+              "WhenOpened": "2025-10-23T14:26:22.034Z",
               "EditorCaption": ""
             }
           ]
