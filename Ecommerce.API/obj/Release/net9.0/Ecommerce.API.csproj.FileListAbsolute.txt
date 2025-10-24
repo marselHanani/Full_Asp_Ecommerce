@@ -74,7 +74,6 @@ C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\M
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -104,7 +103,6 @@ C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\M
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Mono.TextTemplating.dll
-C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\NContext.Extensions.Redis.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Newtonsoft.Json.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\NuGet.Common.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\NuGet.Configuration.dll
@@ -115,7 +113,6 @@ C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\N
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\NuGet.ProjectModel.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\NuGet.Protocol.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\NuGet.Versioning.dll
-C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\QuestPDF.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\RBush.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Serilog.dll
@@ -129,7 +126,6 @@ C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\S
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Serilog.Sinks.File.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\SixLabors.Fonts.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Slugify.Core.dll
-C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\StackExchange.Redis.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Stripe.net.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -369,3 +365,7 @@ C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\obj\Release\net9.0\E
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\obj\Release\net9.0\Ecommerce.API.genruntimeconfig.cache
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\obj\Release\net9.0\ref\Ecommerce.API.dll
 C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\EnyimMemcachedCore.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\MessagePack.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\MessagePack.Annotations.dll
+C:\Users\marselhanane\Desktop\Full_E_Commerse\Ecommerce.API\bin\Release\net9.0\Newtonsoft.Json.Bson.dll

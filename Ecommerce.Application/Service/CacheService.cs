@@ -1,11 +1,10 @@
-﻿using Enyim.Caching;
-using Microsoft.Extensions.Caching.Distributed;
+﻿using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 
 namespace Ecommerce.Application.Service
 {
-    public class CacheService(IDistributedCache cache, ILogger<CacheService> logger)
+    public class CacheService(IMemoryCache cache, ILogger<CacheService> logger)
     {
         private readonly JsonSerializerOptions _jsonOptions = new()
         {
@@ -18,14 +17,19 @@ namespace Ecommerce.Application.Service
         {
             try
             {
-                var bytes = await cache.GetAsync(key);
-                if (bytes == null) return default;
-                var json = System.Text.Encoding.UTF8.GetString(bytes);
-                return JsonSerializer.Deserialize<T>(json, _jsonOptions);
+                if (cache.TryGetValue(key, out var obj))
+                {
+                    if (obj is byte[] bytes)
+                    {
+                        var json = System.Text.Encoding.UTF8.GetString(bytes);
+                        return JsonSerializer.Deserialize<T>(json, _jsonOptions);
+                    }
+                }
+                return default;
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error accessing Memcached for key: {Key}", key);
+                logger.LogError(ex, "Error accessing MemoryCache for key: {Key}", key);
                 return default;
             }
         }
@@ -37,16 +41,16 @@ namespace Ecommerce.Application.Service
                 var json = JsonSerializer.Serialize(value, _jsonOptions);
                 var bytes = System.Text.Encoding.UTF8.GetBytes(json);
 
-                var options = new Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions
+                var options = new MemoryCacheEntryOptions
                 {
                     AbsoluteExpirationRelativeToNow = expiry ?? TimeSpan.FromMinutes(30)
                 };
 
-                await cache.SetAsync(key, bytes, options);
+                cache.Set(key, bytes, options);
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error adding to Memcached for key: {Key}", key);
+                logger.LogError(ex, "Error adding to MemoryCache for key: {Key}", key);
                 throw;
             }
         }
@@ -55,11 +59,11 @@ namespace Ecommerce.Application.Service
         {
             try
             {
-                await cache.RemoveAsync(key);
+                cache.Remove(key);
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error removing from Memcached for key: {Key}", key);
+                logger.LogError(ex, "Error removing from MemoryCache for key: {Key}", key);
                 throw;
             }
         }

@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using QuestPDF.Infrastructure;
@@ -159,12 +160,9 @@ builder.Services.AddScoped<IManageUserService, ManageUserService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IUserProfileService, UserProfileService>();
 
-// ---------- Memcached ----------
-builder.Services.AddEnyimMemcached(options =>
-{
-    options.AddServer("51.21.192.67", 11211);
-});
-builder.Services.AddSingleton<IDistributedCache, MemcachedDistributedCache>();
+// ---------- Memory Cache ----------
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<IDistributedCache, MemoryDistributedCache>();
 
 var app = builder.Build();
 
